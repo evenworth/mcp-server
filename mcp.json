@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "evenworth": {
+      "type": "http",
+      "url": "https://app.evenworth.io/mcp"
+    }
+  }
+}
