@@ -62,7 +62,7 @@ Plaid (banks), Interactive Brokers, crypto wallets, CSV import, and manual accou
 
 ## Reporting issues and questions
 
-This repository is the support surface for the MCP server. [Open an issue](../../issues) for bugs, feature requests, or questions — or start a [discussion](../../discussions).
+This repository is the support surface for the MCP server. [Open an issue](../../issues) for bugs, feature requests, or questions.
 
 ## Links
 
