@@ -4,7 +4,7 @@ Ask an AI questions about your whole financial picture — in the client you alr
 
 [Evenworth](https://evenworth.io) is a read-only net-worth tool. This repository documents its **MCP server**: a remote [Model Context Protocol](https://modelcontextprotocol.io) endpoint that lets an AI assistant read the same balances, transactions, cash flow, positions and targets the Evenworth app shows you.
 
-It is **open MCP, not a built-in assistant**. Connect whatever client you use — Claude, Cursor, ChatGPT, Grok, Gemini, VS Code, Claude Code, Gemini CLI — and ask questions over sources Plaid-only tools can't reach: Interactive Brokers (including options P&L), crypto wallets, manual accounts, multi-currency.
+It is **open MCP, not a built-in assistant**. Connect whatever client you use — Claude, Cursor, ChatGPT, Grok, Gemini, VS Code, Claude Code, Gemini CLI — and ask questions over sources Plaid-only tools can't reach: Interactive Brokers (including options P&L) and crypto wallets on 7 chains.
 
 **The MCP server is free.** It is part of the free plan, and there is nothing to buy to use it.
 
@@ -45,7 +45,7 @@ The client opens the consent page itself; you never paste credentials into a con
 
 ## What the AI can read
 
-Balances, daily history, transactions and their summary, monthly cash flow and where money moved, monthly snapshots, IBKR positions, trades, dividends and P&L, settings and targets, notes, plans, and alert rules — scoped to the workspaces you grant.
+The server exposes 16 read tools and 12 write tools. Reads cover balances, daily history, transactions and their summary, monthly cash flow and where money moved, monthly snapshots, IBKR positions, trades, dividends and P&L, settings and targets, notes, plans, and alert rules — scoped to the workspaces you grant.
 
 ## What it cannot do
 
@@ -58,7 +58,7 @@ Evenworth is **read-only by design**. No tool moves money — not between your a
 
 ## Sources
 
-Plaid (banks), Interactive Brokers, crypto wallets, CSV import, and manual accounts in any currency.
+Plaid (US banks and credit unions), Interactive Brokers, and crypto wallets on 7 chains — Bitcoin, Ethereum, Solana, Tron, Kaspa, Litecoin and Dogecoin, plus USDT on Ethereum, Tron and Solana. No exchanges.
 
 ## Reporting issues and questions
 
