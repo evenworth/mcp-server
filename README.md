@@ -47,6 +47,15 @@ The client opens the consent page itself; you never paste credentials into a con
 
 The server exposes 16 read tools and 12 write tools. Reads cover balances, daily history, transactions and their summary, monthly cash flow and where money moved, monthly snapshots, IBKR positions, trades, dividends and P&L, settings and targets, notes, plans, and alert rules — scoped to the workspaces you grant.
 
+## Prompts
+
+The server provides four slash commands (prompts) that you can invoke in your AI client:
+
+- `/add_preference` — Save a standing preference rule (e.g., categorization rules, recurring patterns)
+- `/add_event` — Save a dated event with start/end dates for time-scoped context
+- `/review_transactions` — Interactive workflow to review and categorize transactions that need attention
+- `/sync_context` — Intelligently sync learned context from transactions into structured notes
+
 ## What it cannot do
 
 Evenworth is **read-only by design**. No tool moves money — not between your accounts, not out of them. Tools that change Evenworth's own records (tags, notes, targets, settings) are marked as writes, so your client asks before running them.
