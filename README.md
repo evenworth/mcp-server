@@ -28,6 +28,43 @@ You can also paste the URL into a client config:
 }
 ```
 
+## Install
+
+The way you connect depends on your client:
+
+### Claude.ai and Claude Apps (Desktop/Mobile)
+
+Add the MCP connector with the URL `https://app.evenworth.io/mcp`. The slash commands (prompts) come with the MCP connection — nothing else to install.
+
+**Slash commands available:**
+- `/add_preference` — Save a standing preference rule
+- `/add_event` — Save a dated event
+- `/review_transactions` — Review and categorize transactions
+- `/sync_context` — Sync context from transactions to notes
+
+### Claude Code and CLI Agents (Cursor, VS Code)
+
+For CLI agents, install the Agent Skills:
+
+```bash
+npx skills add evenworth/mcp-server
+```
+
+Or manually copy the skills from this repository into `~/.claude/skills/`:
+
+```bash
+# Clone or download this repo, then:
+cp -r skills/* ~/.claude/skills/
+```
+
+**Skills available:**
+- `add-preference` — Save a standing preference rule
+- `add-event` — Save a dated event
+- `review-transactions` — Review and categorize transactions
+- `sync-context` — Sync context from transactions to notes
+
+Each skill checks for the Evenworth MCP connection first and will prompt you to connect if needed.
+
 ## Clients
 
 | Client | How to add it |
