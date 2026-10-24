@@ -28,6 +28,43 @@ You can also paste the URL into a client config:
 }
 ```
 
+## Install
+
+The way you connect depends on your client:
+
+### Claude.ai and Claude Apps (Desktop/Mobile)
+
+Add the MCP connector with the URL `https://app.evenworth.io/mcp`. The slash commands (prompts) come with the MCP connection — nothing else to install.
+
+**Slash commands available:**
+- `/add_preference` — Save a standing preference rule
+- `/add_event` — Save a dated event
+- `/review_transactions` — Review and categorize transactions
+- `/sync_context` — Sync context from transactions to notes
+
+### Claude Code and CLI Agents (Cursor, VS Code)
+
+For CLI agents, install the Agent Skills:
+
+```bash
+npx skills add evenworth/mcp-server
+```
+
+Or manually copy the skills from this repository into `~/.claude/skills/`:
+
+```bash
+# Clone or download this repo, then:
+cp -r skills/* ~/.claude/skills/
+```
+
+**Skills available:**
+- `add-preference` — Save a standing preference rule
+- `add-event` — Save a dated event
+- `review-transactions` — Review and categorize transactions
+- `sync-context` — Sync context from transactions to notes
+
+Each skill checks for the Evenworth MCP connection first and will prompt you to connect if needed.
+
 ## Clients
 
 | Client | How to add it |
@@ -46,6 +83,15 @@ The client opens the consent page itself; you never paste credentials into a con
 ## What the AI can read
 
 The server exposes 16 read tools and 12 write tools. Reads cover balances, daily history, transactions and their summary, monthly cash flow and where money moved, monthly snapshots, IBKR positions, trades, dividends and P&L, settings and targets, notes, plans, and alert rules — scoped to the workspaces you grant.
+
+## Prompts
+
+The server provides four slash commands (prompts) that you can invoke in your AI client:
+
+- `/add_preference` — Save a standing preference rule (e.g., categorization rules, recurring patterns)
+- `/add_event` — Save a dated event with start/end dates for time-scoped context
+- `/review_transactions` — Interactive workflow to review and categorize transactions that need attention
+- `/sync_context` — Intelligently sync learned context from transactions into structured notes
 
 ## What it cannot do
 
